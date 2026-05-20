@@ -1,0 +1,299 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "mobile": "0987654321",
+      "password_hash": "a4c75a26dde162f71520e6942da650419417eaf7dff150182c7db0863311572c",
+      "salt": "9101096de0e9f01cb3c9d352a9c3bce3",
+      "created_at": "18 May 2026, 02:42 AM",
+      "name": "kush",
+      "remember_token": "xjqGoDT_4SXDgwPa_z2usEGsGaPFTFqA7NZbqVnIWck"
+    },
+    {
+      "id": 1,
+      "mobile": "9327287633",
+      "password_hash": "c6b7d9e3a3096e342815b7b47e085474631ce3ffa2014b9db3ee64fda9b3469f",
+      "salt": "6c302c442816715268235209ef5b76a4",
+      "created_at": "18 May 2026, 02:34 AM",
+      "name": null,
+      "remember_token": null
+    }
+  ],
+  "detection_history": [
+    {
+      "id": 26,
+      "detection_type": "Image",
+      "input_data": "WhatsApp Image 2026-05-17 at 2.47.42 PM.jpeg",
+      "image_path": "history_images\\17bed43e6fc44cb0891fa6b91a82bc1c.jpg",
+      "result": "Possible Mental Health Risk",
+      "score": "70.00%",
+      "emotion": "Sad",
+      "created_at": "18 May 2026, 11:37 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 25,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\796f44601d7945cbb5bc42a6942d7a50.jpg",
+      "result": "Low Risk / Normal",
+      "score": "10.00%",
+      "emotion": "Happy",
+      "created_at": "18 May 2026, 11:37 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 24,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\0e1f4f6281584740bfec4962e5b6cf47.jpg",
+      "result": "Possible Mental Health Risk",
+      "score": "70.00%",
+      "emotion": "Sad",
+      "created_at": "18 May 2026, 11:36 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 23,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\e3848bb026f24a43951fefd34fcb6409.jpg",
+      "result": "Low Risk / Normal",
+      "score": "25.00%",
+      "emotion": "Neutral",
+      "created_at": "18 May 2026, 11:36 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 22,
+      "detection_type": "Text",
+      "input_data": "I still reach for you in the quiet moments, only to remember the empty space you left behind. I miss you.",
+      "image_path": "",
+      "result": "Possible Mental Health Risk",
+      "score": "70.00%",
+      "emotion": "Sad",
+      "created_at": "18 May 2026, 11:34 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 21,
+      "detection_type": "Social Media Visual",
+      "input_data": "https://www.instagram.com/p/DVW-Y-DCPMl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "image_path": "history_images\\60481bb563c440c8b8c5d19ce36925fd.jpg",
+      "result": "Possible Mental Health Risk",
+      "score": "70.00%",
+      "emotion": "Sad",
+      "created_at": "18 May 2026, 11:32 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 20,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\be721edf53804d1293de078d28e623ef.jpg",
+      "result": "Low Risk / Normal",
+      "score": "25.00%",
+      "emotion": "Neutral",
+      "created_at": "18 May 2026, 10:58 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 19,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\e978bf9f4d9f44f1b26a4d18b016b2d5.jpg",
+      "result": "Low Risk / Normal",
+      "score": "10.00%",
+      "emotion": "Happy",
+      "created_at": "18 May 2026, 10:02 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 18,
+      "detection_type": "Social Media Visual",
+      "input_data": "https://www.instagram.com/p/DS9fE0skfUp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "image_path": "history_images\\8461b1bfd0614a42aaa5345be4563582.jpg",
+      "result": "Low Risk / Normal",
+      "score": "25.00%",
+      "emotion": "Neutral",
+      "created_at": "18 May 2026, 10:02 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 17,
+      "detection_type": "Social Media Visual",
+      "input_data": "https://www.instagram.com/p/DVW-Y-DCPMl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "image_path": "history_images\\0fdb7852c00b4ca1b21cc81ae2bc7748.jpg",
+      "result": "Possible Mental Health Risk",
+      "score": "70.00%",
+      "emotion": "Sad",
+      "created_at": "18 May 2026, 09:58 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 16,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\64fd8657297a4bddbf6f6f262561a8ae.jpg",
+      "result": "Low Risk / Normal",
+      "score": "25.00%",
+      "emotion": "Neutral",
+      "created_at": "18 May 2026, 09:52 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 12,
+      "detection_type": "Image",
+      "input_data": "WhatsApp Image 2026-05-17 at 2.47.42 PM.jpeg",
+      "image_path": "history_images\\a420761d18b344aa813637e8bfda9d6b.jpg",
+      "result": "Possible Mental Health Risk",
+      "score": "70.00%",
+      "emotion": "Sad",
+      "created_at": "18 May 2026, 09:32 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 11,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\a818be9c569f4438b14c7077bb9a65ad.jpg",
+      "result": "Low Risk / Normal",
+      "score": "10.00%",
+      "emotion": "Happy",
+      "created_at": "18 May 2026, 09:31 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 10,
+      "detection_type": "Text",
+      "input_data": "Aaje mane khub stress lage chhe. College work ane family pressure ne lidhe mind heavy lage chhe, pan hu try karu chhu calm rehva mate. Thodi rest, music, ane friend sathe vaat karvi helpful lage chhe.",
+      "image_path": "",
+      "result": "Medium Risk / Stress Pattern",
+      "score": "55.09%",
+      "emotion": "Stress",
+      "created_at": "18 May 2026, 09:31 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 9,
+      "detection_type": "Text",
+      "input_data": "Aaje mane khub stress lage chhe. College work ane family pressure ne lidhe mind heavy lage chhe, pan hu try karu chhu calm rehva mate. Thodi rest, music, ane friend sathe vaat karvi helpful lage chhe.",
+      "image_path": "",
+      "result": "Medium Risk / Stress Pattern",
+      "score": "55.09%",
+      "emotion": "Stress",
+      "created_at": "18 May 2026, 09:24 AM",
+      "user_mobile": "0987654321"
+    },
+    {
+      "id": 8,
+      "detection_type": "Image",
+      "input_data": "WhatsApp Image 2026-05-17 at 2.47.42 PM.jpeg",
+      "image_path": "history_images\\1b4c31d317f44043b1d4479743276562.jpg",
+      "result": "Possible Mental Health Risk",
+      "score": "70.00%",
+      "emotion": "Sad",
+      "created_at": "17 May 2026, 11:10 PM",
+      "user_mobile": "9327287633"
+    },
+    {
+      "id": 7,
+      "detection_type": "Image",
+      "input_data": "WhatsApp Image 2026-05-17 at 2.47.42 PM.jpeg",
+      "image_path": "history_images\\9235887bdf8e4492b2a8593ab83b1ba2.jpg",
+      "result": "Possible Mental Health Risk",
+      "score": "70.00%",
+      "emotion": "Sad",
+      "created_at": "17 May 2026, 10:46 PM",
+      "user_mobile": "9327287633"
+    },
+    {
+      "id": 6,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\8e65349d9d1b42bc8b14df8c74eabd4d.jpg",
+      "result": "Low Risk / Normal",
+      "score": "25.00%",
+      "emotion": "Neutral",
+      "created_at": "17 May 2026, 10:45 PM",
+      "user_mobile": "9327287633"
+    },
+    {
+      "id": 5,
+      "detection_type": "Social Media Visual",
+      "input_data": "https://www.instagram.com/p/DT7KoBVDKwk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "image_path": "history_images\\a364f724fe374e928f3c756e7037f9d8.jpg",
+      "result": "Low Risk / Normal",
+      "score": "30.00%",
+      "emotion": "Surprise",
+      "created_at": "17 May 2026, 10:28 PM",
+      "user_mobile": "9327287633"
+    },
+    {
+      "id": 4,
+      "detection_type": "Social Media",
+      "input_data": "https://www.instagram.com/p/DYP8rkBE_kC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==: https://www.instagram.com/p/DYP8rkBE_kC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\n",
+      "image_path": "",
+      "result": "Medium Risk / Stress Pattern",
+      "score": "48.63%",
+      "emotion": "Neutral",
+      "created_at": "17 May 2026, 09:17 PM",
+      "user_mobile": "9327287633"
+    },
+    {
+      "id": 3,
+      "detection_type": "Image",
+      "input_data": "WhatsApp Image 2026-05-17 at 2.47.42 PM.jpeg",
+      "image_path": "history_images\\e967f2937e6942d1a32f869a285f1de6.jpg",
+      "result": "Possible Mental Health Risk",
+      "score": "70.00%",
+      "emotion": "😢 Sad",
+      "created_at": "17 May 2026, 02:48 PM",
+      "user_mobile": "9327287633"
+    },
+    {
+      "id": 2,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\df4b01baf7ca459d81068ad4d4db3b58.jpg",
+      "result": "Low Risk / Normal",
+      "score": "25.00%",
+      "emotion": "🙂 Neutral",
+      "created_at": "17 May 2026, 02:45 PM",
+      "user_mobile": "9327287633"
+    },
+    {
+      "id": 1,
+      "detection_type": "Camera",
+      "input_data": "Captured image",
+      "image_path": "history_images\\6ab8cfaafb2742689064f79daa727727.jpg",
+      "result": "Low Risk / Normal",
+      "score": "10.00%",
+      "emotion": "😊 Happy",
+      "created_at": "17 May 2026, 02:44 PM",
+      "user_mobile": "9327287633"
+    }
+  ],
+  "mood_journal": [
+    {
+      "id": 8,
+      "mood_score": 8,
+      "mood_label": "Calm",
+      "note": "",
+      "gratitude": "",
+      "created_at": "18 May 2026, 11:39 AM",
+      "user_mobile": "0987654321",
+      "mood_kind": "Balanced"
+    },
+    {
+      "id": 1,
+      "mood_score": 6,
+      "mood_label": "Stressed",
+      "note": "Aaje thodu stress feel thay chhe because study/work pressure vadhi gayu chhe. Pan hu calm rehva try karu chhu and thodi rest leva mango chhu.",
+      "gratitude": "I completed one important task today and talked with a friend.",
+      "created_at": "18 May 2026, 09:33 AM",
+      "user_mobile": "0987654321",
+      "mood_kind": null
+    }
+  ]
+}
