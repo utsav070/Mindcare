@@ -18,6 +18,15 @@ from datetime import datetime
 import joblib
 import pandas as pd
 import streamlit as st
+st.set_page_config(page_title="MindCare AI")
+
+st.title("MindCare AI")
+st.success("Website Working Successfully ✅")
+
+name = st.text_input("Enter name")
+
+if st.button("Test"):
+    st.write("Hello", name)
 from PIL import Image
 
 # from train_model import train_and_save_model
