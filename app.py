@@ -20,7 +20,7 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 
-from train_model import train_and_save_model
+# from train_model import train_and_save_model
 
 
 MODEL_PATH = "model/mental_health_model.pkl"
@@ -2218,7 +2218,7 @@ def render_mood_health_graph(df, title="Daily Mood and Mental Health Graph"):
 @st.cache_resource
 def load_model():
     if not os.path.exists(MODEL_PATH):
-        train_and_save_model()
+        # train_and_save_model()
     return joblib.load(MODEL_PATH)
 
 
