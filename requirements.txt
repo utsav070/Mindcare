@@ -3,7 +3,3 @@ pandas==2.2.2
 Pillow==10.4.0
 scikit-learn==1.5.0
 joblib==1.4.2
-tensorflow==2.16.1
-keras==3.3.3
-deepface==0.0.91
-opencv-python-headless
