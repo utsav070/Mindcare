@@ -2218,7 +2218,7 @@ def render_mood_health_graph(df, title="Daily Mood and Mental Health Graph"):
 @st.cache_resource
 def load_model():
     if not os.path.exists(MODEL_PATH):
-        # train_and_save_model()
+        pass
     return joblib.load(MODEL_PATH)
 
 
