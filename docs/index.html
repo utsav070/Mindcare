@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindCare AI</title>
+  <style>
+    :root {
+      --ink: #24122e;
+      --muted: #74637b;
+      --paper: #fbf8ff;
+      --panel: rgba(255,255,255,.9);
+      --line: rgba(42,14,60,.14);
+      --deep: #2a0e3c;
+      --violet: #5e2b6d;
+      --gold: #d8b96a;
+      --red: #b42318;
+      --green: #0f7b52;
+      --amber: #ad7600;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(135deg, #fbf8ff 0%, #f2edf7 48%, #fffaf2 100%);
+      min-height: 100vh;
+    }
+    .layout { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+    aside {
+      background: linear-gradient(180deg, #2a0e3c 0%, #24102f 60%, #170420 100%);
+      color: white;
+      padding: 30px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    aside h2 { margin: 0 0 14px; }
+    aside p { color: rgba(255,255,255,.72); line-height: 1.6; }
+    nav { display: grid; gap: 10px; margin-top: 28px; }
+    nav button {
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      text-align: left;
+      background: transparent;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    nav button.active, nav button:hover { background: rgba(255,255,255,.13); }
+    main { padding: 28px; max-width: 1220px; width: 100%; }
+    .topbar {
+      background: linear-gradient(135deg, #2a0e3c, #6d347d);
+      color: white;
+      border-radius: 22px;
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 22px 60px rgba(42,14,60,.18);
+    }
+    .brand { display: flex; gap: 18px; align-items: center; }
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #fff4bd, #d8b96a);
+      color: #2a0e3c;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+    .brand h1 { margin: 0; font-size: 24px; }
+    .brand p { margin: 8px 0 0; opacity: .84; }
+    .pill {
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 800;
+      color: white;
+    }
+    .tabs { display: flex; gap: 14px; flex-wrap: wrap; margin: 18px 0; }
+    .tabs button {
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 12px 18px;
+      background: rgba(255,255,255,.75);
+      color: var(--ink);
+      font-weight: 750;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(42,14,60,.06);
+    }
+    .hero {
+      border-radius: 24px;
+      padding: 34px;
+      background: linear-gradient(135deg, rgba(255,255,255,.95), rgba(255,255,255,.72));
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 80px rgba(42,14,60,.11);
+      display: grid;
+      grid-template-columns: 1.25fr .9fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: #ece9fb;
+      border: 1px solid #d9d1ef;
+      color: #145b62;
+      font-weight: 850;
+      font-size: 13px;
+    }
+    .hero h2 {
+      color: var(--violet);
+      font-size: 56px;
+      line-height: 1.05;
+      margin: 24px 0 20px;
+      max-width: 620px;
+    }
+    .hero p { font-size: 17px; line-height: 1.65; max-width: 620px; }
+    .chips { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .chip {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-weight: 800;
+    }
+    .dark-panel {
+      background: #2a0e3c;
+      color: white;
+      border-radius: 22px;
+      padding: 28px;
+    }
+    .dark-panel p { color: rgba(255,255,255,.86); }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .metric {
+      border-radius: 14px;
+      padding: 18px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+    }
+    .metric span { display: block; font-size: 12px; text-transform: uppercase; font-weight: 900; opacity: .8; }
+    .metric b { display: block; font-size: 24px; margin-top: 8px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .card, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 18px 50px rgba(42,14,60,.09);
+    }
+    .card h3, .panel h2 { color: var(--violet); margin-top: 0; }
+    textarea {
+      width: 100%;
+      min-height: 160px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      font: inherit;
+      color: var(--ink);
+      background: white;
+    }
+    .primary {
+      margin-top: 14px;
+      border: 0;
+      border-radius: 14px;
+      padding: 14px 20px;
+      color: white;
+      background: linear-gradient(135deg, #2a0e3c, #6d347d);
+      font-weight: 900;
+      cursor: pointer;
+    }
+    .result { display: none; margin-top: 18px; }
+    .risk-low { color: var(--green); }
+    .risk-medium { color: var(--amber); }
+    .risk-high { color: var(--red); }
+    table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 14px; }
+    th, td { padding: 13px; border-bottom: 1px solid var(--line); text-align: left; }
+    th { background: #f1ecf8; color: var(--violet); }
+    .page { display: none; }
+    .page.active { display: block; }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; }
+      .hero, .grid { grid-template-columns: 1fr; }
+      .hero h2 { font-size: 40px; }
+      .metric-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <h2>MindCare AI</h2>
+      <p>AI assisted mental health awareness project for educational review.</p>
+      <nav>
+        <button class="active" data-page="home">Home</button>
+        <button data-page="analysis">Text Analysis</button>
+        <button data-page="dashboard">Results Dashboard</button>
+        <button data-page="details">Project Details</button>
+        <button data-page="privacy">Privacy</button>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="topbar">
+        <div class="brand">
+          <div class="logo">MC</div>
+          <div>
+            <h1>MindCare AI</h1>
+            <p>Premium AI workspace for mental health pattern awareness</p>
+          </div>
+        </div>
+        <div class="pill">Private awareness demo</div>
+      </section>
+
+      <div class="tabs">
+        <button data-page="home">Home</button>
+        <button data-page="analysis">Text Analysis</button>
+        <button data-page="dashboard">Dashboard</button>
+        <button data-page="details">Project Details</button>
+      </div>
+
+      <section id="home" class="page active">
+        <div class="hero">
+          <div>
+            <div class="eyebrow">AI assisted wellbeing intelligence</div>
+            <h2>MindCare AI for clearer emotional signals.</h2>
+            <p>Analyze social media-style text and mood notes to estimate low, medium, or high emotional risk patterns for awareness and review.</p>
+            <div class="chips">
+              <span class="chip">Text mood scan</span>
+              <span class="chip">Social post analyzer</span>
+              <span class="chip">Result dashboard</span>
+            </div>
+          </div>
+          <div class="dark-panel">
+            <h3>Latest signal</h3>
+            <p id="latest-note">Run an analysis to create your first saved signal.</p>
+            <div class="metric-grid">
+              <div class="metric"><span>Score</span><b id="latest-score">--</b></div>
+              <div class="metric"><span>Risk</span><b id="latest-risk">Waiting</b></div>
+              <div class="metric"><span>Mode</span><b>Private</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card"><h3>Text Analysis</h3><p>Enter a post, caption, or reflection and get an instant risk score.</p></div>
+          <div class="card"><h3>Dashboard</h3><p>Recent checks are summarized with score and detected signal.</p></div>
+          <div class="card"><h3>Project Purpose</h3><p>Built for educational mental health awareness, not medical diagnosis.</p></div>
+        </div>
+      </section>
+
+      <section id="analysis" class="page">
+        <div class="panel">
+          <h2>Text Analysis</h2>
+          <p>Paste social media-style text, a caption, or a short mood note.</p>
+          <textarea id="inputText" placeholder="Example: I feel stressed and alone today, too much pressure..."></textarea>
+          <br>
+          <button class="primary" id="analyzeBtn">Analyze Text</button>
+          <div class="result panel" id="resultBox">
+            <h2 id="riskLabel">Low Risk</h2>
+            <h1 id="scoreLabel">0%</h1>
+            <p id="resultNote"></p>
+            <p><b>Suggestion:</b> If distress feels strong or unsafe, talk to a trusted person or mental health professional.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="page">
+        <div class="panel">
+          <h2>Results Dashboard</h2>
+          <div class="metric-grid">
+            <div class="card"><h3>Total checks</h3><h1 id="totalChecks">0</h1></div>
+            <div class="card"><h3>Average score</h3><h1 id="avgScore">--</h1></div>
+            <div class="card"><h3>High risk signals</h3><h1 id="highCount">0</h1></div>
+          </div>
+          <div style="overflow:auto;margin-top:20px">
+            <table>
+              <thead><tr><th>Time</th><th>Input</th><th>Score</th><th>Risk</th><th>Note</th></tr></thead>
+              <tbody id="historyRows"><tr><td colspan="5">No analysis yet.</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="details" class="page">
+        <div class="panel">
+          <h2>Project Details</h2>
+          <p><b>MindCare AI</b> demonstrates how AI-style text processing can support mental health awareness by identifying emotional patterns in user-written text.</p>
+          <p><b>Modules:</b> text analysis, risk scoring, dashboard, privacy note, and project explanation.</p>
+          <p><b>Important:</b> This is an educational project and not a medical diagnosis system.</p>
+        </div>
+      </section>
+
+      <section id="privacy" class="page">
+        <div class="panel">
+          <h2>Privacy</h2>
+          <p>This demo keeps analysis history only in the current browser session.</p>
+          <p>No medical claim is made. It is intended for project demonstration and awareness only.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const positiveWords = new Set(["happy","calm","good","great","fine","better","hope","peace","smile","relaxed","positive","strong","love","support"]);
+    const riskWords = new Set(["sad","stress","stressed","anxiety","anxious","depressed","alone","cry","tension","panic","hopeless","tired","fear","angry","low","hurt","broken","empty","pressure","worry","worried"]);
+    const history = [];
+
+    function clean(text) {
+      return text.toLowerCase().replace(/[^a-z0-9\\s]/g, " ").replace(/\\s+/g, " ").trim();
+    }
+
+    function analyze(text) {
+      const cleaned = clean(text);
+      const tokens = cleaned.split(" ").filter(Boolean);
+      let riskHits = tokens.filter(word => riskWords.has(word)).length;
+      let positiveHits = tokens.filter(word => positiveWords.has(word)).length;
+      let score = 30 + riskHits * 18 - positiveHits * 10;
+      if (["very sad", "too much", "give up", "no hope"].some(phrase => cleaned.includes(phrase))) score += 18;
+      score = Math.max(5, Math.min(95, score));
+      if (score >= 65) return { score, risk: "High Risk", cls: "risk-high", note: "Strong emotional distress signal detected." };
+      if (score >= 40) return { score, risk: "Medium Risk", cls: "risk-medium", note: "Some stress or low mood pattern detected." };
+      return { score, risk: "Low Risk", cls: "risk-low", note: "Text looks mostly stable or positive." };
+    }
+
+    function showPage(id) {
+      document.querySelectorAll(".page").forEach(page => page.classList.toggle("active", page.id === id));
+      document.querySelectorAll("nav button").forEach(button => button.classList.toggle("active", button.dataset.page === id));
+    }
+
+    function updateDashboard() {
+      document.getElementById("totalChecks").textContent = history.length;
+      document.getElementById("avgScore").textContent = history.length ? `${(history.reduce((sum, item) => sum + item.score, 0) / history.length).toFixed(1)}%` : "--";
+      document.getElementById("highCount").textContent = history.filter(item => item.risk === "High Risk").length;
+      const body = document.getElementById("historyRows");
+      if (!history.length) {
+        body.innerHTML = '<tr><td colspan="5">No analysis yet.</td></tr>';
+        return;
+      }
+      body.innerHTML = history.slice().reverse().map(item => `
+        <tr>
+          <td>${item.time}</td>
+          <td>${item.text.replace(/[&<>]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[char])).slice(0, 90)}</td>
+          <td>${item.score}%</td>
+          <td>${item.risk}</td>
+          <td>${item.note}</td>
+        </tr>
+      `).join("");
+    }
+
+    document.querySelectorAll("[data-page]").forEach(button => {
+      button.addEventListener("click", () => showPage(button.dataset.page));
+    });
+
+    document.getElementById("analyzeBtn").addEventListener("click", () => {
+      const text = document.getElementById("inputText").value.trim();
+      if (!text) {
+        alert("Please enter text first.");
+        return;
+      }
+      const result = analyze(text);
+      history.push({ ...result, text, time: new Date().toLocaleString() });
+      document.getElementById("riskLabel").textContent = result.risk;
+      document.getElementById("riskLabel").className = result.cls;
+      document.getElementById("scoreLabel").textContent = `${result.score}%`;
+      document.getElementById("resultNote").textContent = result.note;
+      document.getElementById("resultBox").style.display = "block";
+      document.getElementById("latest-note").textContent = result.note;
+      document.getElementById("latest-score").textContent = `${result.score}%`;
+      document.getElementById("latest-risk").textContent = result.risk;
+      updateDashboard();
+    });
+  </script>
+</body>
+</html>
