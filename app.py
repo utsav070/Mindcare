@@ -18,15 +18,6 @@ from datetime import datetime
 import joblib
 import pandas as pd
 import streamlit as st
-st.set_page_config(page_title="MindCare AI")
-
-st.title("MindCare AI")
-st.success("Website Working Successfully ✅")
-
-name = st.text_input("Enter name")
-
-if st.button("Test"):
-    st.write("Hello", name)
 from PIL import Image
 
 # from train_model import train_and_save_model
@@ -2227,7 +2218,8 @@ def render_mood_health_graph(df, title="Daily Mood and Mental Health Graph"):
 @st.cache_resource
 def load_model():
     if not os.path.exists(MODEL_PATH):
-        pass
+        st.error("Model file is missing. Please run train_model.py before starting the app.")
+        st.stop()
     return joblib.load(MODEL_PATH)
 
 
